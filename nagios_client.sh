@@ -18,3 +18,9 @@ sed -i.bak s/allowed_hosts=127.0.0.1/'allowed_hosts=127.0.0.1, 172.22.4.52, 38.9
 # start services
 systemctl start nrpe
 chkconfig nrpe on
+# open firewall port 
+
+firewall-cmd --permanent --zone=public --add-rich-rule="rule family="ipv4" \
+source address="38.99.188.12/32" \
+port protocol="tcp" port="5666" accept"
+firewall-cmd --reload
