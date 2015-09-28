@@ -84,7 +84,6 @@ mdpolicy = group:main
 
 # Uncomment to auto-import new gpg keys (dangerous)
 # assumeyes = True
-[root@circ ~]# 
 EOL
 
 systemctl enable yum-cron.service
