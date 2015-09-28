@@ -1,11 +1,9 @@
+#!/bin/bash
 yum -y install yum-cron
-   81  cd /etc/yum
-   82  vim yum-cron.conf 
-   83  vi yum-cron.conf 
-   84  systemctl enable yum-cron.service
-   85  systemctl start yum-cron.service
-   86  systemctl status yum-cron.service
-[root@circ ~]# cat /etc/yum/yum-cron.conf 
+
+   
+   
+cat >/etc/yum/yum-cron.conf  <<EOL
 [commands]
 #  What kind of update to use:
 # default                            = yum upgrade
@@ -87,3 +85,10 @@ mdpolicy = group:main
 # Uncomment to auto-import new gpg keys (dangerous)
 # assumeyes = True
 [root@circ ~]# 
+EOL
+
+systemctl enable yum-cron.service
+systemctl start yum-cron.service
+systemctl status yum-cron.service
+
+
