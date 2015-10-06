@@ -1,5 +1,18 @@
 #!/bin/bash
 
+
+# FOR firewalld_state remote plugin the following has to be done (defined as firewalld status)
+# 1. copy plugin to  /usr/lib64/nagios/plugins/ on client system and chmod +x 
+# 2. edit /etc/nagios/nrpe.conf and add plugin  and add below
+# command[firewalld_state]=/usr/lib64/nagios/plugins/firewalld_state.sh
+
+
+
+
+
+
+
+
 # make sure this information is flled up
 
 IP_NG='172.22.4.136'
