@@ -108,6 +108,14 @@ define service{
 	check_command			check_ssh
 	notifications_enabled		0
         }
+define service{
+          use                 generic-service
+          host_name           $HOSTNAME_NG
+          service_description Firewalld status
+          contact_groups      $CONTACT_GRP
+          check_command       check_nrpe!firewalld_state
+          }
+
 
 
 EOL
