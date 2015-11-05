@@ -1,5 +1,5 @@
 #!/bin/sh
-IP_ADDR='192.168.0.22'
+IP_ADDR='38.99.188.17'
 
 cat > /etc/fail2ban/jail.local <<EOF
 /etc/rsyslog.d/90-graylog2.conf
